@@ -1,0 +1,103 @@
+/*aboutMe section animation*/
+
+@-webkit-keyframes big-font {
+    100% {
+        font-size: $big-font;
+    }
+}
+
+@keyframes big-font {
+    100% {
+        font-size: $big-font;
+    }
+}
+
+@-webkit-keyframes normal-font {
+    0% {
+        font-size: $big-font;
+    }
+
+    100% {
+        font-size: $normal-font;
+    }
+}
+
+@keyframes normal-font {
+    0% {
+        font-size: $big-font;
+    }
+
+    100% {
+        font-size: $normal-font;
+    }
+}
+
+@-webkit-keyframes scroll-up {
+    0% {
+        height: 50%;
+        margin-top: 35vh;
+        margin-bottom: 0;
+    }
+
+    100% {
+        height: 49%;
+        margin-top: 0;
+        margin-bottom: 35vh;
+    }
+}
+
+@keyframes scroll-up {
+    0% {
+        height: 50%;
+        margin-top: 35vh;
+        margin-bottom: 0;
+    }
+
+    100% {
+        height: 49%;
+        margin-top: 0;
+        margin-bottom: 35vh;
+    }
+}
+
+@-webkit-keyframes scroll-down {
+    0% {
+        height: 49%;
+        margin-top: 0;
+        margin-bottom: 35vh;
+    }
+
+    100% {
+        height: 50%;
+        margin-top: 35vh;
+        margin-bottom: 0;
+    }
+}
+
+@keyframes scroll-down {
+    0% {
+        height: 49%;
+        margin-top: 0;
+        margin-bottom: 35vh;
+    }
+
+    100% {
+        height: 50%;
+        margin-top: 35vh;
+        margin-bottom: 0;
+    }
+}
+
+@-webkit-keyframes colorfull {
+    100% {
+        color: $skyblue;
+        border-color: $skyblue;
+    }
+}
+
+@keyframes colorfull {
+    100% {
+        color: $skyblue;
+        border-color: $skyblue;
+    }
+}

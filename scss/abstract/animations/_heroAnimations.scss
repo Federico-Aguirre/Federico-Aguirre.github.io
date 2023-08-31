@@ -1,0 +1,69 @@
+/*hero section animations*/
+
+@-webkit-keyframes hero-background {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes hero-background {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@-webkit-keyframes fill-white {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: white;
+    }
+}
+
+@keyframes fill-white {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: white;
+    }
+}
+
+@-webkit-keyframes llenar-celeste {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: $skyblue;
+    }
+}
+
+@keyframes llenar-celeste {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: $skyblue;
+    }
+}

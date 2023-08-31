@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Poppins:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./fullpage.min.css">
+    <link rel="stylesheet" href="./main.css">
+    <title>Federico-Aguirre-Porfolio</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#page1" class="header__home" aria-label="heroSectionLink">Home</a>
+        <a href="#page2" class="header__projects" aria-label="ProjectsSectionLink">Projects</a>
+        <a href="#page3" class="header__aboutMe" aria-label="AboutMeSectionLink">About me</a>
+        <a href="#page4" class="header__contact" aria-label="ContactSectionLink">Contact</a>
+        <button class="header__navBar" title="navBarMenu">
+            <div class="header__navBar__line"></div>
+            <div class="header__navBar__line"></div>
+        </button>
+        <button class="header__light" title="LightBackgroundButton">
+            <div class="header__light__circle"></div>
+            <img class="header__light__sun" src="images/svg/sun.svg" alt="">
+            <img class="header__light__moon" src="images/svg/moon.svg" alt="">
+        </button>
+    </header>
+
+    <div class="viewProjects">
+        <a href="#page2" class="viewProjects__linkProjects" aria-label="ProjectsSectionLink">Go to projects</a>
+    </div>
+    <a href="#page1" class="linkHero" aria-label="heroSectionLink">
+        <img class="linkImg" src="./images/flecha-100x75.png" alt="">
+    </a>
+
+    <div class="navBarMenu">
+        <a href="#page1" class="navBarMenu__home" aria-label="heroSectionLink">Home</a>
+        <a href="#page2" class="navBarMenu__projects" aria-label="ProjectsSectionLink">Projects</a>
+        <a href="#page3" class="navBarMenu__aboutMe" aria-label="AboutMeSectionLink">About me</a>
+        <a href="#page4" class="navBarMenu__contact" aria-label="ContactSectionLink">Contact</a>
+    </div>
+    <div id="fullpage">
+
+        <section class="section hero" id="hero" data-anchor="page1">
+            <div class="hero__color"></div>
+            <div class="hero__container">
+                <svg class="hero__container__logo" viewbox=" 0 0 150 50">
+                    <text x="10" y="0">
+                        <tspan x="10" y="15">
+                            <tspan class="hero__container__logo__firstLetters">F</tspan>ederico Aguirre
+                        </tspan>
+                        <tspan x="10" y="45">
+                            <tspan class="hero__container__logo__firstLetters">F</tspan>ullStack
+                        </tspan>
+                        <tspan x="10" y="75">
+                            <tspan class="hero__container__logo__firstLetters">W</tspan>eb Developer
+                        </tspan>
+                    </text>
+                </svg>
+            </div>
+        </section>
+
+        <section class="section projects" id="projects" data-anchor="page2">
+
+            <div class="projects__container">
+                <div class="projects__container__card1 projects__container__card"
+                    onclick="window.open('https://federico-aguirre.github.io/ChatApp/','_blank')">
+                    <div class="projects__container__text">React.js Chat App
+                        <div class="hiddenText">Dependencies: React.js, universal-cookie, CSS, Firebase.
+                        </div>
+                    </div>
+                    <picture>
+                        <source media="(max-width: 600px)"
+                            srcset="images/cardImages/ReactJs-Chat-App/ReactJs-Chat-App_320x200.png">
+                        <img src="images/cardImages/ReactJs-Chat-App/ReactJs-Chat-App.png" alt="Proyect image"
+                            loading="lazy" decoding="async">
+                    </picture>
+                </div>
+                <div class="projects__container__card2 projects__container__card"
+                    onclick="window.open('http://reactjs-ecommerce-by-federico-aguirre.netlify.app/','_blank');">
+                    <div class="projects__container__text">React.js E-commerce
+                        <div class="hiddenText">Dependencies: React.js, Bootstrap, CSS, react-router-dom, Firebase.
+                        </div>
+                    </div>
+                    <picture>
+                        <source media="(max-width: 600px)"
+                            srcset="images/cardImages/ReactJs-E-commerce/ReactJs-E-commerce_320x200.png">
+                        <img src="images/cardImages/ReactJs-E-commerce/ReactJs-E-commerce.png" alt="Proyect image"
+                            loading="lazy" decoding="async">
+                    </picture>
+                </div>
+
+                <div class="projects__container__card3 projects__container__card blur-load"
+                    onclick="window.open('http://reactjs-sql-employee-crud.netlify.app/','_blank');">
+                    <div class="projects__container__text">React.js MySQL Employee CRUD
+                        <div class="hiddenText">Dependencies: React.js, MySQL, React-router-dom, Supabase, Axios,
+                            Body-parcer, Cors, Nodemon, Wouter.
+                        </div>
+                    </div>
+                    <picture>
+                        <source media="(max-width: 600px)"
+                            srcset="images/cardImages/Employee-CRUD/Employee-CRUD-320x200.png">
+                        <img src="images/cardImages/Employee-CRUD/Employee-CRUD.png" alt="Proyect image" loading="lazy"
+                            decoding="async">
+                    </picture>
+                </div>
+                <div class="projects__container__card4 projects__container__card"
+                    onclick="window.open('https://chessappjs.netlify.app/','_blank');">
+                    <div class="projects__container__text">Chess App
+                        <div class="hiddenText">Dependencies: HTML, CSS, JavaScript.
+                        </div>
+                    </div>
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="images/cardImages/ChessJs/ChessJs-320x200.png">
+                        <img src="images/cardImages/ChessJs/ChessJs.png" alt="Proyect image" loading="lazy"
+                            decoding="async">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <section class="aboutMe section" id="aboutMe" data-anchor="page3">
+
+            <div class="aboutMe__containerForEffects">
+                <div class="aboutMe__container">
+                    <div class="aboutMe__container__scroll"></div>
+                    <button class="aboutMe__container__text">About <br> me</button>
+                    <div class="aboutMe__container__text__content">
+                        I was always attracted to technology, and in 2018 I was able to start
+                        with my learnings. I enjoy bringing ideas to life in the
+                        browser, learning and overcoming new challenges. My
+                        Specialty is front-end development with focus on producing
+                        web pages and applications that are fast, easy to use,
+                        With an optimal UX / UI design and accessible in a wide range of
+                        Devices and browsers.
+                    </div>
+                    <button class="aboutMe__container__studies">Studies</button>
+                    <div class="aboutMe__container__studies__content">
+                        <div class="aboutMe__container__studies__content__lenguagesTitulo">
+                            Technical knowledge
+                        </div>
+
+                        <ul class="aboutMe__container__studies__content__lenguages1">
+                            <li>HTML</li>
+                            <li>UX/UI design</li>
+                            <li>Git+github</li>
+                            <li>CSS</li>
+                            <li>SASS</li>
+                            <li>Bootstrap</li>
+                            <li>JavaScript</li>
+                            <li>EcmaScript</li>
+                        </ul>
+                        <ul class="aboutMe__container__studies__content__lenguages2">
+                            <li>JQuery</li>
+                            <li>NodeJS</li>
+                            <li>Express</li>
+                            <li>ReactJS</li>
+                            <li>Redux</li>
+                            <li>PHP</li>
+                            <li>SQL</li>
+                            <li>MySQL</li>
+                        </ul>
+
+                        <a href="https://drive.google.com/drive/folders/10ba68nUmdU_Oy7nGn8oUexGqy85KSSnU?usp=sharing"
+                            class="aboutMe__container__studies__content__certificates" target="_blank"
+                            aria-label="CertificatesLink">
+                            Certificates link
+                        </a>
+
+                        <a href="https://drive.google.com/file/d/1Kl9MpGvMNTJ4vpDSfrtPnSeAnJ6cEMx6/view?usp=sharing"
+                            class="aboutMe__container__studies__content__CV" target="_blank" aria-label="ResumeLink">
+                            Resume link
+                        </a>
+                    </div>
+
+                    <div class="aboutMe__containerWebDevForEffects">
+                        <div class="aboutMe__containerWebDev">
+                            <img class="" src="images/svg/webDeveloper.svg" data-delay="1s" title="SvgOwnerImage"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="contact section" id="contact" data-anchor="page4">
+            <div class="contact__formContainerForEffects">
+                <div class="contact__formContainer">
+                    <form class="contact__formContainer__form" action="https://formspree.io/mjvapnag" method="POST">
+                        <div>Send message</div>
+                        <input class="contact__formContainer__form__name" id="name" type="text" name="name"
+                            autocomplete="off" placeholder="  " required />
+                        <label class="contact__formContainer__form__labelName" for="name">Name</label>
+
+                        <input class="contact__formContainer__form__email" id="email" type="email" name="email"
+                            autocomplete="off" placeholder="  " required />
+                        <label class="contact__formContainer__form__labelEmail" for="email">Email</label>
+
+                        <input class="contact__formContainer__form__affair" id="affair" type="text" name="affair"
+                            autocomplete="off" placeholder="  " required />
+                        <label class="contact__formContainer__form__labelAffair" for="affair">Affair</label>
+
+                        <textarea class="contact__formContainer__form__textarea1" id="textarea1" name="consultation"
+                            placeholder=" "></textarea>
+                        <label class="contact__formContainer__form__labelTextarea1" for="textarea1">Message</label>
+
+                        <input type="submit" value="Send" class="contact__formContainer__form__enviar" />
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="contact__links">
+                <div class="contact__links__linkedin">
+                    <a href="https://www.linkedin.com/in/federico-nicolas-aguirre/" target="_blank"
+                        aria-label="LinkedinLink">
+                        <img src="./images/svg/linkedin.svg" alt="" />
+                    </a>
+                </div>
+                <div class="contact__links__github">
+                    <a href="https://github.com/Federico-Aguirre" target="_blank" aria-label="GithubLink">
+                        <img src="./images/svg/github.svg" alt="" />
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Can`t use modules to import scripts with fullpage library-->
+    <script src="./fullpage.min.js"></script>
+    <script src="./fullpageConfig/fullpageConfig.js"></script>
+    <script src="./components/globalVariables.js"></script>
+    <script src="./components/slidingEffect.js"></script>
+    <script src="./components/storeScroll.js"></script>
+    <script src="./components/aboutMeScroll.js"></script>
+    <script src="./components/headerUnderliningEffect.js"></script>
+    <script src="./components/heroLinkAnimation.js"></script>
+    <script src="/components/hiddenMenu.js"></script>
+    <script src="./components/3dAnimation.js"></script>
+    <script src="./components/lightDarkBackground.js"></script>
+</body>
+
+</html>

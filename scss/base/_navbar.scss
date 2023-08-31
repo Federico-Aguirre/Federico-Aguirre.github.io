@@ -1,0 +1,28 @@
+.navBarMenu {
+    height: 0;
+    width: 0;
+    top: 4em;
+    left: -20em;
+    position: fixed;
+    background-color: $darkViolet;
+    -webkit-animation: none;
+    animation: none;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    grid-template-rows: repeat(4, 1fr);
+
+    * {
+        color: $white;
+    }
+}
+
+.closeNavBarMenu {
+    -webkit-animation: closingNavBarMenu 1s forwards;
+    animation: closingNavBarMenu 1s forwards;
+}
+
+.navScrolled {
+    color: $skyblue;
+    border-bottom: 4px solid $skyblue;
+}

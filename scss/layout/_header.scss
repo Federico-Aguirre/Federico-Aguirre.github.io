@@ -1,0 +1,160 @@
+header * {
+  position: relative;
+  transition: $transitionDelay;
+}
+
+.header {
+  height: 4em;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  font-size: $normal-font;
+  z-index: 100;
+  display: grid;
+  place-content: center;
+  column-gap: 1em;
+  grid-template-columns: repeat(3, auto);
+  background-color: $lightViolet;
+
+  &__projects,
+  &__aboutMe,
+  &__contact {
+    display: none;
+  }
+
+  &__navBar {
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    padding: 5px 10px;
+
+    &__line {
+      padding: 2px 15px;
+      background: $white;
+      margin: 0px 3px 2px -3px;
+      border-radius: 1.5em;
+    }
+
+    &__line:nth-of-type(2) {
+      padding: 2px 15px;
+      background: $white;
+      margin: 2px -3px 0px 3px;
+      border-radius: 1.5em;
+    }
+  }
+
+  &__light {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+    place-items: center;
+    width: 3em;
+    border-radius: 2em;
+    border: 3px solid $skyblue;
+    background-color: $black;
+    cursor: pointer;
+    user-select: none;
+
+    &__circle {
+      place-self: center end;
+      position: fixed;
+      height: 1.5em;
+      width: 1.5em;
+      background-color: $white;
+      border-radius: 2em;
+      z-index: 100;
+      -webkit-animation: lightCircle 0.5s forwards;
+      animation: lightCircle 0.5s forwards;
+    }
+
+    &__circleDark {
+      animation: darkCircle 0.5s forwards;
+    }
+
+    &__moon {
+      height: 1em;
+      grid-column: 2;
+      background-position: center center;
+      background-size: cover;
+    }
+
+    &__sun {
+      height: 1em;
+      grid-column: 1;
+      background-position: center center;
+      background-size: cover;
+    }
+  }
+}
+
+.header a:hover,
+.header button:hover {
+  transform: $bigSize;
+}
+
+.headerColor {
+  color: $white;
+}
+
+.navScrolled {
+  color: $skyblue;
+  border-bottom: 4px solid $skyblue;
+}
+
+@media (min-width: 600px) {
+  .header {
+    grid-template-columns: repeat(5, auto);
+
+    &__projects,
+    &__aboutMe,
+    &__contact {
+      display: block;
+    }
+
+    &__navBar {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+
+  .header {
+    background-color: transparent;
+    grid-template-columns: repeat(5, auto);
+
+    &__projects,
+    &__aboutMe,
+    &__contact {
+      display: block;
+    }
+
+    &__navBar {
+      display: none;
+    }
+  }
+
+  html:not([data-scroll="0"]) {
+    header * {
+      color: $lightViolet;
+    }
+
+    .navScrolled {
+      color: $lightViolet;
+      border-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 799px) {
+
+  .header {
+
+    &__home,
+    &__projects,
+    &__aboutMe,
+    &__contact {
+      color: $white;
+    }
+  }
+}

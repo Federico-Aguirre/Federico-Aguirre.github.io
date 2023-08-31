@@ -1,0 +1,84 @@
+.viewProjects {
+    -webkit-animation: none;
+    animation: none;
+    position: absolute;
+    z-index: 2;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: $transitionDelay;
+    top: 70%;
+    left: 50%;
+    color: $darkViolet;
+    text-align: center;
+    line-height: 4.5em;
+    border-radius: 60px;
+    background-color: $white;
+    transform: translate(-50%);
+
+    &__linkProjects {
+        height: 5%;
+        width: 10em;
+        -webkit-animation: none;
+        animation: none;
+
+        &__hoverEffect:hover {
+            transform: $bigSize translate(-40%);
+        }
+    }
+
+    &__linkProjects:active {
+        color: $lightViolet;
+    }
+}
+
+.linkHero {
+    position: fixed;
+    z-index: 2;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: $transitionDelay;
+    top: 65%;
+    left: 50%;
+    color: transparent;
+    text-align: center;
+    height: 4em;
+    width: 4em;
+    border-radius: 60px;
+    margin: 10% 0 0 35%;
+
+    &__hoverEffect:hover {
+        transform: $bigSize;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+@media (min-width: 800px) {
+
+    .viewProjects {
+        position: fixed;
+        z-index: 2;
+        -webkit-animation: returnPulse 0.3s linear;
+        animation: returnPulse 0.3s linear;
+
+        &__linkProjects {
+            margin-top: -5%;
+            -webkit-animation: returnPulse2 0.3s linear;
+            animation: returnPulse2 0.3s linear;
+        }
+    }
+
+    .linkHero {
+        -webkit-animation: pulse 0.3s linear;
+        animation: pulse 0.3s linear;
+    }
+}

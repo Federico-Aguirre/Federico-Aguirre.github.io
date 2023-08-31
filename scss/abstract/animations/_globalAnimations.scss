@@ -1,0 +1,132 @@
+.classAppearFromTheRight {
+  -webkit-animation: AppearFromTheRight 1s forwards ease-out;
+  animation: AppearFromTheRight 1s forwards ease-out;
+}
+
+@-webkit-keyframes AppearFromTheRight {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes AppearFromTheRight {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.classAppearByLeft {
+  -webkit-animation: AppearByLeft 1s forwards ease-out;
+  animation: AppearByLeft 1s forwards ease-out;
+}
+
+@-webkit-keyframes AppearByLeft {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes AppearByLeft {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.shadowClass {
+  -webkit-animation: shadowIn 1s forwards;
+  animation: shadowIn 1s forwards;
+}
+
+@-webkit-keyframes shadowIn {
+  0% {
+    box-shadow: $shadowLight;
+  }
+
+  100% {
+    box-shadow: $shadow;
+  }
+}
+
+@keyframes shadowIn {
+  0% {
+    box-shadow: $shadowLight;
+  }
+
+  100% {
+    box-shadow: $shadow;
+  }
+}
+
+.ShadowLightClass {
+  -webkit-animation: ShadowLightIn 1s forwards;
+  animation: ShadowLightIn 1s forwards;
+}
+
+@-webkit-keyframes ShadowLightIn {
+  0% {
+    box-shadow: $shadow;
+  }
+
+  100% {
+    box-shadow: $shadowLight;
+  }
+}
+
+@keyframes ShadowLightIn {
+  0% {
+    box-shadow: $shadow;
+  }
+
+  100% {
+    box-shadow: $shadowLight;
+  }
+}
+
+.shadowsOn {
+  -webkit-animation: shadowsOnAnimation 1s forwards;
+  animation: shadowsOnAnimation 1s forwards;
+}
+
+@-webkit-keyframes shadowsOnAnimation {
+  0% {
+    box-shadow: none;
+  }
+
+  100% {
+    box-shadow: $shadow;
+  }
+}
+
+@keyframes shadowsOnAnimation {
+  0% {
+    box-shadow: none;
+  }
+
+  100% {
+    box-shadow: $shadow;
+  }
+}

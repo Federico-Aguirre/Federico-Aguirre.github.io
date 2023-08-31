@@ -1,0 +1,202 @@
+.aboutMe {
+  height: 750px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  place-content: center;
+
+  &__container {
+    height: auto;
+    width: 90%;
+    border: 1px solid $darkViolet;
+    border-radius: 1em;
+    background-color: $darkViolet;
+    box-shadow: $shadow;
+    display: grid;
+    margin: 0 auto;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto;
+
+    &__scroll,
+    &__text,
+    &__studies {
+      display: none;
+    }
+
+    &__scroll {
+      grid-row: 1/-1;
+      background-color: $skyblue;
+      -webkit-animation: scroll-up 0.3s forwards;
+      animation: scroll-up 0.3s forwards;
+    }
+
+    &__scrollDown {
+      -webkit-animation: scroll-down 0.3s forwards;
+      animation: scroll-down 0.3s forwards;
+    }
+
+    &__text {
+      grid-row: 1;
+      grid-column: 2;
+      align-items: center;
+      background-color: $lightViolet;
+      border-top-left-radius: 10px;
+      border-bottom: 5px solid $darkViolet;
+      -webkit-animation: normal-font 0.5s forwards;
+      animation: normal-font 0.5s forwards;
+      cursor: pointer;
+
+      &__content {
+        grid-column: 3;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        align-self: start;
+        margin: 1em;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+    }
+
+    &__studies {
+      grid-row: 2;
+      grid-column: 2;
+      align-items: center;
+      background-color: $lightViolet;
+      border-bottom-left-radius: 10px;
+      -webkit-animation: normal-font 0.5s forwards;
+      animation: normal-font 0.5s forwards;
+      cursor: pointer;
+
+      &__content {
+        display: grid;
+        grid-column: 3;
+        grid-template-rows: 20px 1fr auto;
+        grid-template-columns: 1fr 1fr;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        line-height: 2em;
+        margin: 1em;
+        text-align: start;
+        place-items: center;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        &__lenguagesTitulo {
+          grid-column: 1/-1;
+        }
+
+        &__certificates,
+        &__CV {
+          border: 1px solid $white;
+          border-radius: 10px;
+          padding: 1em;
+          font-size: 0.9em;
+          color: white;
+        }
+
+        &__certificates:hover,
+        &__CV:hover {
+          -webkit-animation: colorfull 0.2s forwards;
+          animation: colorfull 0.2s forwards;
+        }
+      }
+    }
+
+    &__text:hover,
+    &__studies:hover {
+      -webkit-animation: big-font 0.5s forwards;
+      animation: big-font 0.5s forwards;
+    }
+  }
+
+
+
+
+}
+
+@media (min-width: 800px) {
+  .aboutMe {
+    height: 100vh;
+    grid-template-rows: 70%;
+    grid-template-columns: 50% auto;
+
+    //to the For effects container the animation "AppearByLeft" is added and to the next container the animation "shadowClass", they are separated in different For containers that do not get between them
+    &__containerForEffects {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+
+    &__containerWebDevForEffects {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+
+    &__container {
+      height: 70vh;
+      font-size: 0.8em;
+      border-radius: 0;
+      grid-template-rows: repeat(2, 50%);
+      grid-template-columns: 5px 150px 1fr;
+
+      &__scroll,
+      &__text,
+      &__studies {
+        display: grid;
+      }
+
+      &__text__content {
+        text-align: start;
+        align-self: center;
+        grid-row: 1/-1;
+        margin: 10px;
+      }
+
+      &__studies__content {
+        display: none;
+        grid-row: 1/-1;
+        width: 100%;
+        margin: 20px;
+      }
+    }
+  }
+
+  .aboutMe__containerWebDev {
+    display: none;
+    grid-column: -1;
+    width: 40vw;
+    height: 70vh;
+    background-color: $lightViolet;
+    box-shadow: $shadow;
+
+    img {
+      grid-column: 3;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .aboutMe__containerWebDevForEffects {
+    display: block;
+    grid-column: -1;
+    width: 40vw;
+    height: 70vh;
+  }
+}
+
+.aboutMe__containerWebDev {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .aboutMe__container {
+    font-size: 1em;
+  }
+
+  .aboutMe__containerWebDev {
+    display: block;
+  }
+}
